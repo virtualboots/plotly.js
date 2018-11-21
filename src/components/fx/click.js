@@ -23,6 +23,17 @@ module.exports = function click(gd, evt, subplot) {
     }
 
     function emitClick() { gd.emit('plotly_click', {points: gd._hoverdata, event: evt}); }
+    // Get the mouse click position on xaxis
+    var render_margin_l = parseInt(gd.layout.margin['l']);
+    var render_w = gd._fullLayout._size.w;
+    var mouse_x = evt.offsetX;
+    var axisx_min = parseInt(gd.layout.xaxis.range[0]);
+    var axisx_max = parseInt(gd.layout.xaxis.range[1]);
+    var click_x = ((parseInt(mouse_x) - render_margin_l) / render_w * (axisx_max - axisx_min)) + axisx_min
+
+    // Create a custom_data and send it along with other data
+    var custom_data = {click_x: click_x}
+    function emitClick() { gd.emit('plotly_click', {points: gd._hoverdata, event: evt, custom_data: custom_data}); }
 
     if(gd._hoverdata && evt && evt.target) {
         if(annotationsDone && annotationsDone.then) {
@@ -33,4 +44,7 @@ module.exports = function click(gd, evt, subplot) {
         // why do we get a double event without this???
         if(evt.stopImmediatePropagation) evt.stopImmediatePropagation();
     }
+    // Emit event even if no data is selected
+    // This against the design philosophy, but I really need this.
+    if(evt && evt.target) emitClick();
 };

@@ -6048,7 +6048,7 @@ function boxIntersectWrapper(arg0, arg1, arg2) {
       throw new Error('box-intersect: Invalid arguments')
   }
 }
-},{"./lib/intersect":44,"./lib/sweep":48,"typedarray-pool":290}],43:[function(_dereq_,module,exports){
+},{"./lib/intersect":44,"./lib/sweep":48,"typedarray-pool":292}],43:[function(_dereq_,module,exports){
 'use strict'
 
 var DIMENSION   = 'd'
@@ -6688,7 +6688,7 @@ function boxIntersectIter(
     }
   }
 }
-},{"./brute":43,"./median":45,"./partition":46,"./sweep":48,"bit-twiddle":39,"typedarray-pool":290}],45:[function(_dereq_,module,exports){
+},{"./brute":43,"./median":45,"./partition":46,"./sweep":48,"bit-twiddle":39,"typedarray-pool":292}],45:[function(_dereq_,module,exports){
 'use strict'
 
 module.exports = findMedian
@@ -7524,7 +7524,7 @@ red_loop:
     }
   }
 }
-},{"./sort":47,"bit-twiddle":39,"typedarray-pool":290}],49:[function(_dereq_,module,exports){
+},{"./sort":47,"bit-twiddle":39,"typedarray-pool":292}],49:[function(_dereq_,module,exports){
 
 },{}],50:[function(_dereq_,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
@@ -10953,7 +10953,7 @@ function cleanPSLG (points, edges, colors) {
   return modified
 }
 
-},{"./lib/rat-seg-intersect":60,"big-rat":25,"big-rat/cmp":23,"big-rat/to-float":37,"box-intersect":42,"nextafter":221,"rat-vec":251,"robust-segment-intersect":265,"union-find":291}],60:[function(_dereq_,module,exports){
+},{"./lib/rat-seg-intersect":60,"big-rat":25,"big-rat/cmp":23,"big-rat/to-float":37,"box-intersect":42,"nextafter":221,"rat-vec":251,"robust-segment-intersect":265,"union-find":293}],60:[function(_dereq_,module,exports){
 'use strict'
 
 module.exports = solveIntersection
@@ -11693,7 +11693,7 @@ function compareAngle(a, b, c, d) {
     }
   }
 }
-},{"robust-orientation":262,"robust-product":263,"robust-sum":267,"signum":268,"two-sum":289}],69:[function(_dereq_,module,exports){
+},{"robust-orientation":262,"robust-product":263,"robust-sum":267,"signum":268,"two-sum":291}],69:[function(_dereq_,module,exports){
 module.exports=[
 	"xx-small",
 	"x-small",
@@ -11873,7 +11873,7 @@ function parseLineHeight(value) {
 	return value
 }
 
-},{"./lib/util":74,"css-font-stretch-keywords":70,"css-font-style-keywords":71,"css-font-weight-keywords":72,"css-global-keywords":77,"css-system-font-keywords":78,"string-split-by":276,"unquote":293}],76:[function(_dereq_,module,exports){
+},{"./lib/util":74,"css-font-stretch-keywords":70,"css-font-style-keywords":71,"css-font-weight-keywords":72,"css-global-keywords":77,"css-system-font-keywords":78,"string-split-by":276,"unquote":295}],76:[function(_dereq_,module,exports){
 'use strict'
 
 var pick = _dereq_('pick-by-alias')
@@ -12465,7 +12465,7 @@ function generateCWiseOp(proc, typesig) {
 }
 module.exports = generateCWiseOp
 
-},{"uniq":292}],81:[function(_dereq_,module,exports){
+},{"uniq":294}],81:[function(_dereq_,module,exports){
 "use strict"
 
 // The function below is called when constructing a cwise function object, and does the following:
@@ -23178,7 +23178,7 @@ function edgeToAdjacency(edges, numVertices) {
   }
   return adj
 }
-},{"uniq":292}],94:[function(_dereq_,module,exports){
+},{"uniq":294}],94:[function(_dereq_,module,exports){
 // Inspired by Google Closure:
 // http://closure-library.googlecode.com/svn/docs/
 // closure_goog_array_array.js.html#goog.array.clear
@@ -27140,7 +27140,7 @@ function createBuffer(gl, data, type, usage) {
 
 module.exports = createBuffer
 
-},{"ndarray":220,"ndarray-ops":219,"typedarray-pool":290}],157:[function(_dereq_,module,exports){
+},{"ndarray":220,"ndarray-ops":219,"typedarray-pool":292}],157:[function(_dereq_,module,exports){
 module.exports = {
   0: 'NONE',
   1: 'ONE',
@@ -28723,7 +28723,7 @@ function createHeatmap2D (plot, options) {
   return heatmap
 }
 
-},{"./lib/shaders":165,"binary-search-bounds":166,"gl-buffer":156,"gl-shader":180,"iota-array":205,"typedarray-pool":290}],165:[function(_dereq_,module,exports){
+},{"./lib/shaders":165,"binary-search-bounds":166,"gl-buffer":156,"gl-shader":180,"iota-array":205,"typedarray-pool":292}],165:[function(_dereq_,module,exports){
 'use strict'
 
 var glslify = _dereq_('glslify')
@@ -29456,7 +29456,7 @@ function createTextElements(plot) {
   return text
 }
 
-},{"./shaders":171,"binary-search-bounds":173,"gl-buffer":156,"gl-shader":180,"text-cache":283}],173:[function(_dereq_,module,exports){
+},{"./shaders":171,"binary-search-bounds":173,"gl-buffer":156,"gl-shader":180,"text-cache":285}],173:[function(_dereq_,module,exports){
 arguments[4][57][0].apply(exports,arguments)
 },{"dup":57}],174:[function(_dereq_,module,exports){
 'use strict'
@@ -30269,7 +30269,7 @@ function createPointcloud2D(plot, options) {
   return result
 }
 
-},{"./lib/shader":175,"gl-buffer":156,"gl-shader":180,"typedarray-pool":290}],177:[function(_dereq_,module,exports){
+},{"./lib/shader":175,"gl-buffer":156,"gl-shader":180,"typedarray-pool":292}],177:[function(_dereq_,module,exports){
 'use strict'
 
 var glslify = _dereq_('glslify')
@@ -30558,7 +30558,7 @@ function createSelectBuffer(gl, shape) {
   return new SelectBuffer(gl, fbo, buffer)
 }
 
-},{"bit-twiddle":39,"cwise/lib/wrapper":82,"gl-fbo":162,"ndarray":220,"typedarray-pool":290}],180:[function(_dereq_,module,exports){
+},{"bit-twiddle":39,"cwise/lib/wrapper":82,"gl-fbo":162,"ndarray":220,"typedarray-pool":292}],180:[function(_dereq_,module,exports){
 'use strict'
 
 var createUniformWrapper   = _dereq_('./lib/create-uniforms')
@@ -32389,7 +32389,7 @@ function isRegl (o) {
 module.exports = GlText
 
 
-},{"bit-twiddle":39,"color-normalize":63,"css-font":73,"detect-kerning":87,"es6-weak-map":145,"flatten-vertex-data":150,"font-atlas":151,"font-measure":152,"gl-util/context":190,"is-plain-obj":210,"object-assign":223,"parse-rect":226,"parse-unit":228,"pick-by-alias":232,"regl":259,"to-px":286,"typedarray-pool":290}],189:[function(_dereq_,module,exports){
+},{"bit-twiddle":39,"color-normalize":63,"css-font":73,"detect-kerning":87,"es6-weak-map":145,"flatten-vertex-data":150,"font-atlas":151,"font-measure":152,"gl-util/context":190,"is-plain-obj":210,"object-assign":223,"parse-rect":226,"parse-unit":228,"pick-by-alias":232,"regl":259,"to-px":288,"typedarray-pool":292}],189:[function(_dereq_,module,exports){
 'use strict'
 
 var ndarray = _dereq_('ndarray')
@@ -32952,7 +32952,7 @@ function createTexture2D(gl) {
   throw new Error('gl-texture2d: Invalid arguments for texture2d constructor')
 }
 
-},{"ndarray":220,"ndarray-ops":219,"typedarray-pool":290}],190:[function(_dereq_,module,exports){
+},{"ndarray":220,"ndarray-ops":219,"typedarray-pool":292}],190:[function(_dereq_,module,exports){
 /** @module  gl-util/context */
 'use strict'
 
@@ -34903,7 +34903,7 @@ function mouseWheelListen(element, callback, noScroll) {
   return listener
 }
 
-},{"to-px":286}],218:[function(_dereq_,module,exports){
+},{"to-px":288}],218:[function(_dereq_,module,exports){
 "use strict"
 
 var pool = _dereq_("typedarray-pool")
@@ -35319,7 +35319,7 @@ function createSurfaceExtractor(args) {
     order,
     typesig)
 }
-},{"typedarray-pool":290}],219:[function(_dereq_,module,exports){
+},{"typedarray-pool":292}],219:[function(_dereq_,module,exports){
 "use strict"
 
 var compile = _dereq_("cwise-compiler")
@@ -36866,7 +36866,7 @@ function permutationSign(p) {
     return sgn
   }
 }
-},{"typedarray-pool":290}],231:[function(_dereq_,module,exports){
+},{"typedarray-pool":292}],231:[function(_dereq_,module,exports){
 "use strict"
 
 var pool = _dereq_("typedarray-pool")
@@ -36953,7 +36953,7 @@ function unrank(n, r, p) {
 exports.rank = rank
 exports.unrank = unrank
 
-},{"invert-permutation":204,"typedarray-pool":290}],232:[function(_dereq_,module,exports){
+},{"invert-permutation":204,"typedarray-pool":292}],232:[function(_dereq_,module,exports){
 'use strict'
 
 
@@ -37424,7 +37424,7 @@ function planarGraphToPolyline(edges, positions) {
 
   return result
 }
-},{"./lib/trim-leaves":234,"edges-to-adjacency-list":93,"planar-dual":233,"point-in-big-polygon":239,"robust-sum":267,"two-product":288,"uniq":292}],236:[function(_dereq_,module,exports){
+},{"./lib/trim-leaves":234,"edges-to-adjacency-list":93,"planar-dual":233,"point-in-big-polygon":239,"robust-sum":267,"two-product":290,"uniq":294}],236:[function(_dereq_,module,exports){
 'use strict'
 
 module.exports = _dereq_('./quad')
@@ -40364,7 +40364,7 @@ function Error2D (regl, options) {
 		meshBuffer.destroy()
 	}
 }
-},{"array-bounds":13,"color-normalize":63,"flatten-vertex-data":150,"object-assign":223,"pick-by-alias":232,"to-float32":285,"update-diff":294}],255:[function(_dereq_,module,exports){
+},{"array-bounds":13,"color-normalize":63,"flatten-vertex-data":150,"object-assign":223,"pick-by-alias":232,"to-float32":287,"update-diff":296}],255:[function(_dereq_,module,exports){
 'use strict'
 
 
@@ -41093,7 +41093,7 @@ Line2D.prototype.destroy = function () {
 	return this
 }
 
-},{"array-bounds":13,"array-normalize":14,"color-normalize":63,"earcut":92,"es6-weak-map":145,"flatten-vertex-data":150,"glslify":199,"object-assign":223,"parse-rect":226,"pick-by-alias":232,"to-float32":285}],256:[function(_dereq_,module,exports){
+},{"array-bounds":13,"array-normalize":14,"color-normalize":63,"earcut":92,"es6-weak-map":145,"flatten-vertex-data":150,"glslify":199,"object-assign":223,"parse-rect":226,"pick-by-alias":232,"to-float32":287}],256:[function(_dereq_,module,exports){
 'use strict'
 
 var Scatter = _dereq_('./scatter')
@@ -42047,7 +42047,7 @@ Scatter.prototype.destroy = function () {
 
 	return this
 }
-},{"array-bounds":13,"color-id":61,"color-normalize":63,"flatten-vertex-data":150,"glslify":199,"is-iexplorer":208,"object-assign":223,"parse-rect":226,"pick-by-alias":232,"point-cluster":236,"to-float32":285,"update-diff":294}],258:[function(_dereq_,module,exports){
+},{"array-bounds":13,"color-id":61,"color-normalize":63,"flatten-vertex-data":150,"glslify":199,"is-iexplorer":208,"object-assign":223,"parse-rect":226,"pick-by-alias":232,"point-cluster":236,"to-float32":287,"update-diff":296}],258:[function(_dereq_,module,exports){
 'use strict'
 
 
@@ -42865,7 +42865,7 @@ function generateInSphereTest() {
 }
 
 generateInSphereTest()
-},{"robust-scale":264,"robust-subtract":266,"robust-sum":267,"two-product":288}],262:[function(_dereq_,module,exports){
+},{"robust-scale":264,"robust-subtract":266,"robust-sum":267,"two-product":290}],262:[function(_dereq_,module,exports){
 "use strict"
 
 var twoProduct = _dereq_("two-product")
@@ -43056,7 +43056,7 @@ function generateOrientationProc() {
 }
 
 generateOrientationProc()
-},{"robust-scale":264,"robust-subtract":266,"robust-sum":267,"two-product":288}],263:[function(_dereq_,module,exports){
+},{"robust-scale":264,"robust-subtract":266,"robust-sum":267,"two-product":290}],263:[function(_dereq_,module,exports){
 "use strict"
 
 var robustSum = _dereq_("robust-sum")
@@ -43137,7 +43137,7 @@ function scaleLinearExpansion(e, scale) {
   g.length = count
   return g
 }
-},{"two-product":288,"two-sum":289}],265:[function(_dereq_,module,exports){
+},{"two-product":290,"two-sum":291}],265:[function(_dereq_,module,exports){
 "use strict"
 
 module.exports = segmentsIntersect
@@ -45050,7 +45050,7 @@ function surfaceNets(array,level) {
   }
   return proc(array,level)
 }
-},{"ndarray-extract-contour":218,"triangulate-hypercube":287,"zero-crossings":302}],279:[function(_dereq_,module,exports){
+},{"ndarray-extract-contour":218,"triangulate-hypercube":289,"zero-crossings":302}],279:[function(_dereq_,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -45511,6 +45511,492 @@ function isPath2DSupported () {
 }
 
 },{"bitmap-sdf":40,"draw-svg-path":89,"is-svg-path":212,"parse-svg-path":227,"svg-path-bounds":280}],283:[function(_dereq_,module,exports){
+"use strict"
+
+module.exports = createText
+
+var vectorizeText = _dereq_("./lib/vtext")
+var defaultCanvas = null
+var defaultContext = null
+
+if(typeof document !== 'undefined') {
+  defaultCanvas = document.createElement('canvas')
+  defaultCanvas.width = 8192
+  defaultCanvas.height = 1024
+  defaultContext = defaultCanvas.getContext("2d")
+}
+
+function createText(str, options) {
+  if((typeof options !== "object") || (options === null)) {
+    options = {}
+  }
+  return vectorizeText(
+    str,
+    options.canvas || defaultCanvas,
+    options.context || defaultContext,
+    options)
+}
+
+},{"./lib/vtext":284}],284:[function(_dereq_,module,exports){
+"use strict"
+
+module.exports = vectorizeText
+module.exports.processPixels = processPixels
+
+var surfaceNets = _dereq_('surface-nets')
+var ndarray = _dereq_('ndarray')
+var simplify = _dereq_('simplify-planar-graph')
+var cleanPSLG = _dereq_('clean-pslg')
+var cdt2d = _dereq_('cdt2d')
+var toPolygonCrappy = _dereq_('planar-graph-to-polyline')
+
+var TAG_bold = "b"
+var CHR_bold = 'b|'
+
+var TAG_italic = "i"
+var CHR_italic = 'i|'
+
+var TAG_super = "sup"
+var CHR_super0 = '+'
+var CHR_super = '+1'
+
+var TAG_sub = "sub"
+var CHR_sub0 = '-'
+var CHR_sub = '-1'
+
+function parseTag(tag, TAG_CHR, str, map) {
+
+  var opnTag =  "<"  + tag + ">"
+  var clsTag =  "</" + tag + ">"
+
+  var nOPN = opnTag.length
+  var nCLS = clsTag.length
+
+  var isRecursive = (TAG_CHR[0] === CHR_super0) ||
+                    (TAG_CHR[0] === CHR_sub0);
+
+  var a = 0
+  var b = -nCLS
+  while (a > -1) {
+    a = str.indexOf(opnTag, a)
+    if(a === -1) break
+
+    b = str.indexOf(clsTag, a + nOPN)
+    if(b === -1) break
+
+    if(b <= a) break
+
+    for(var i = a; i < b + nCLS; ++i){
+      if((i < a + nOPN) || (i >= b)) {
+        map[i] = null
+        str = str.substr(0, i) + " " + str.substr(i + 1)
+      } else {
+        if(map[i] !== null) {
+          var pos = map[i].indexOf(TAG_CHR[0])
+          if(pos === -1) {
+            map[i] += TAG_CHR
+          } else { // i.e. to handle multiple sub/super-scripts
+            if(isRecursive) {
+              // i.e to increase the sub/sup number
+              map[i] = map[i].substr(0, pos + 1) + (1 + parseInt(map[i][pos + 1])) + map[i].substr(pos + 2)
+            }
+          }
+        }
+      }
+    }
+
+    var start = a + nOPN
+    var remainingStr = str.substr(start, b - start)
+
+    var c = remainingStr.indexOf(opnTag)
+    if(c !== -1) a = c
+    else a = b + nCLS
+  }
+
+  return map
+}
+
+function transformPositions(positions, options, size) {
+  var align = options.textAlign || "start"
+  var baseline = options.textBaseline || "alphabetic"
+
+  var lo = [1<<30, 1<<30]
+  var hi = [0,0]
+  var n = positions.length
+  for(var i=0; i<n; ++i) {
+    var p = positions[i]
+    for(var j=0; j<2; ++j) {
+      lo[j] = Math.min(lo[j], p[j])|0
+      hi[j] = Math.max(hi[j], p[j])|0
+    }
+  }
+
+  var xShift = 0
+  switch(align) {
+    case "center":
+      xShift = -0.5 * (lo[0] + hi[0])
+    break
+
+    case "right":
+    case "end":
+      xShift = -hi[0]
+    break
+
+    case "left":
+    case "start":
+      xShift = -lo[0]
+    break
+
+    default:
+      throw new Error("vectorize-text: Unrecognized textAlign: '" + align + "'")
+  }
+
+  var yShift = 0
+  switch(baseline) {
+    case "hanging":
+    case "top":
+      yShift = -lo[1]
+    break
+
+    case "middle":
+      yShift = -0.5 * (lo[1] + hi[1])
+    break
+
+    case "alphabetic":
+    case "ideographic":
+      yShift = -3 * size
+    break
+
+    case "bottom":
+      yShift = -hi[1]
+    break
+
+    default:
+      throw new Error("vectorize-text: Unrecoginized textBaseline: '" + baseline + "'")
+  }
+
+  var scale = 1.0 / size
+  if("lineHeight" in options) {
+    scale *= +options.lineHeight
+  } else if("width" in options) {
+    scale = options.width / (hi[0] - lo[0])
+  } else if("height" in options) {
+    scale = options.height / (hi[1] - lo[1])
+  }
+
+  return positions.map(function(p) {
+    return [ scale * (p[0] + xShift), scale * (p[1] + yShift) ]
+  })
+}
+
+function getPixels(canvas, context, rawString, fontSize, lineSpacing, styletags) {
+
+  rawString = rawString.replace(/\n/g, '') // don't accept \n in the input
+
+  if(styletags.breaklines === true) {
+    rawString = rawString.replace(/\<br\>/g, '\n') // replace <br> tags with \n in the string
+  } else {
+    rawString = rawString.replace(/\<br\>/g, ' ') // don't accept <br> tags in the input and replace with space in this case
+  }
+
+  var activeStyle = ""
+  var map = []
+  for(j = 0; j < rawString.length; ++j) {
+    map[j] = activeStyle
+  }
+
+  if(styletags.bolds === true) map = parseTag(TAG_bold, CHR_bold, rawString, map)
+  if(styletags.italics === true) map = parseTag(TAG_italic, CHR_italic, rawString, map)
+  if(styletags.superscripts === true) map = parseTag(TAG_super, CHR_super, rawString, map)
+  if(styletags.subscripts === true) map = parseTag(TAG_sub, CHR_sub, rawString, map)
+
+  var allStyles = []
+  var plainText = ""
+  for(j = 0; j < rawString.length; ++j) {
+    if(map[j] !== null) {
+      plainText += rawString[j]
+      allStyles.push(map[j])
+    }
+  }
+
+  var allTexts = plainText.split('\n')
+
+  var numberOfLines = allTexts.length
+  var lineHeight = Math.round(lineSpacing * fontSize)
+  var offsetX = fontSize
+  var offsetY = fontSize * 2
+  var maxWidth = 0
+  var minHeight = numberOfLines * lineHeight + offsetY
+
+  if(canvas.height < minHeight) {
+    canvas.height = minHeight
+  }
+
+  context.fillStyle = "#000"
+  context.fillRect(0, 0, canvas.width, canvas.height)
+
+  context.fillStyle = "#fff"
+  var i, j, xPos, yPos, zPos
+  var nDone = 0
+
+  for(i = 0; i < numberOfLines; ++i) {
+
+    var txt = allTexts[i] + '\n'
+    xPos = 0
+    yPos = i * lineHeight
+    zPos = fontSize
+
+    var buffer = ""
+    function writeBuffer() {
+      if(buffer !== "") {
+        var delta = context.measureText(buffer).width
+
+        context.fillText(buffer, offsetX + xPos, offsetY + yPos)
+        xPos += delta
+      }
+    }
+
+    function changeStyle(oldStyle, newStyle) {
+
+      function getTextFontSize() {
+        return "" + Math.round(zPos) + "px ";
+      }
+
+      var ctxFont = "" + context.font;
+
+      if(styletags.subscripts === true) {
+        var oldIndex_Sub = oldStyle.indexOf(CHR_sub0);
+        var newIndex_Sub = newStyle.indexOf(CHR_sub0);
+
+        var oldSub = (oldIndex_Sub > -1) ? parseInt(oldStyle[1 + oldIndex_Sub]) : 0;
+        var newSub = (newIndex_Sub > -1) ? parseInt(newStyle[1 + newIndex_Sub]) : 0;
+
+        if(oldSub !== newSub) {
+          ctxFont = ctxFont.replace(getTextFontSize(), "?px ")
+          zPos *= Math.pow(0.75, (newSub - oldSub))
+          ctxFont = ctxFont.replace("?px ", getTextFontSize())
+        }
+        yPos += 0.25 * lineHeight * (newSub - oldSub);
+      }
+
+      if(styletags.superscripts === true) {
+        var oldIndex_Super = oldStyle.indexOf(CHR_super0);
+        var newIndex_Super = newStyle.indexOf(CHR_super0);
+
+        var oldSuper = (oldIndex_Super > -1) ? parseInt(oldStyle[1 + oldIndex_Super]) : 0;
+        var newSuper = (newIndex_Super > -1) ? parseInt(newStyle[1 + newIndex_Super]) : 0;
+
+        if(oldSuper !== newSuper) {
+          ctxFont = ctxFont.replace(getTextFontSize(), "?px ")
+          zPos *= Math.pow(0.75, (newSuper - oldSuper))
+          ctxFont = ctxFont.replace("?px ", getTextFontSize())
+        }
+        yPos -= 0.25 * lineHeight * (newSuper - oldSuper);
+      }
+
+      if(styletags.bolds === true) {
+        var wasBold = (oldStyle.indexOf(CHR_bold) > -1)
+        var is_Bold = (newStyle.indexOf(CHR_bold) > -1)
+
+        if(!wasBold && is_Bold) {
+          if(wasItalic) {
+            ctxFont = ctxFont.replace("italic ", "italic bold ")
+          } else {
+            ctxFont = "bold " + ctxFont
+          }
+        }
+        if(wasBold && !is_Bold) {
+          ctxFont = ctxFont.replace("bold ", '')
+        }
+      }
+
+      if(styletags.italics === true) {
+        var wasItalic = (oldStyle.indexOf(CHR_italic) > -1)
+        var is_Italic = (newStyle.indexOf(CHR_italic) > -1)
+
+        if(!wasItalic && is_Italic) {
+          ctxFont = "italic " + ctxFont
+        }
+        if(wasItalic && !is_Italic) {
+          ctxFont = ctxFont.replace("italic ", '')
+        }
+      }
+
+      context.font = ctxFont
+    }
+
+    for(j = 0; j < txt.length; ++j) {
+      var style = (j + nDone < allStyles.length) ? allStyles[j + nDone] : allStyles[allStyles.length - 1]
+      if(activeStyle === style) {
+        buffer += txt[j]
+      } else {
+        writeBuffer()
+        buffer = txt[j]
+
+        if(style !== undefined) {
+          changeStyle(activeStyle, style)
+          activeStyle = style
+        }
+      }
+    }
+    writeBuffer()
+
+    nDone += txt.length
+
+    var width = Math.round(xPos + 2 * offsetX) | 0
+    if(maxWidth < width) maxWidth = width
+  }
+
+  //Cut pixels from image
+  var xCut = maxWidth
+  var yCut = offsetY + lineHeight * numberOfLines
+  var pixels = ndarray(context.getImageData(0, 0, xCut, yCut).data, [yCut, xCut, 4])
+  return pixels.pick(-1, -1, 0).transpose(1, 0)
+}
+
+function getContour(pixels, doSimplify) {
+  var contour = surfaceNets(pixels, 128)
+  if(doSimplify) {
+    return simplify(contour.cells, contour.positions, 0.25)
+  }
+  return {
+    edges: contour.cells,
+    positions: contour.positions
+  }
+}
+
+function processPixelsImpl(pixels, options, size, simplify) {
+  //Extract contour
+  var contour = getContour(pixels, simplify)
+
+  //Apply warp to positions
+  var positions = transformPositions(contour.positions, options, size)
+  var edges     = contour.edges
+  var flip = "ccw" === options.orientation
+
+  //Clean up the PSLG, resolve self intersections, etc.
+  cleanPSLG(positions, edges)
+
+  //If triangulate flag passed, triangulate the result
+  if(options.polygons || options.polygon || options.polyline) {
+    var result = toPolygonCrappy(edges, positions)
+    var nresult = new Array(result.length)
+    for(var i=0; i<result.length; ++i) {
+      var loops = result[i]
+      var nloops = new Array(loops.length)
+      for(var j=0; j<loops.length; ++j) {
+        var loop = loops[j]
+        var nloop = new Array(loop.length)
+        for(var k=0; k<loop.length; ++k) {
+          nloop[k] = positions[loop[k]].slice()
+        }
+        if(flip) {
+          nloop.reverse()
+        }
+        nloops[j] = nloop
+      }
+      nresult[i] = nloops
+    }
+    return nresult
+  } else if(options.triangles || options.triangulate || options.triangle) {
+    return {
+      cells: cdt2d(positions, edges, {
+        delaunay: false,
+        exterior: false,
+        interior: true
+      }),
+      positions: positions
+    }
+  } else {
+    return {
+      edges:     edges,
+      positions: positions
+    }
+  }
+}
+
+function processPixels(pixels, options, size) {
+  try {
+    return processPixelsImpl(pixels, options, size, true)
+  } catch(e) {}
+  try {
+    return processPixelsImpl(pixels, options, size, false)
+  } catch(e) {}
+  if(options.polygons || options.polyline || options.polygon) {
+    return []
+  }
+  if(options.triangles || options.triangulate || options.triangle) {
+    return {
+      cells: [],
+      positions: []
+    }
+  }
+  return {
+    edges: [],
+    positions: []
+  }
+}
+
+function vectorizeText(str, canvas, context, options) {
+
+  var size = 64
+  var lineSpacing = 1.25
+  var styletags = {
+    breaklines: false,
+    bolds: false,
+    italics: false,
+    subscripts: false,
+    superscripts: false
+  }
+
+  if(options) {
+
+    if(options.size &&
+       options.size > 0) size =
+       options.size
+
+    if(options.lineSpacing &&
+       options.lineSpacing > 0) lineSpacing =
+       options.lineSpacing
+
+    if(options.styletags &&
+       options.styletags.breaklines) styletags.breaklines =
+       options.styletags.breaklines ? true : false
+
+    if(options.styletags &&
+       options.styletags.bolds) styletags.bolds =
+       options.styletags.bolds ? true : false
+
+    if(options.styletags &&
+       options.styletags.italics) styletags.italics =
+       options.styletags.italics ? true : false
+
+    if(options.styletags &&
+       options.styletags.subscripts) styletags.subscripts =
+       options.styletags.subscripts ? true : false
+
+    if(options.styletags &&
+       options.styletags.superscripts) styletags.superscripts =
+       options.styletags.superscripts ? true : false
+  }
+
+  context.font = [
+    options.fontStyle,
+    options.fontVariant,
+    options.fontWeight,
+    size + "px",
+    options.font
+  ].filter(function(d) {return d}).join(" ")
+  context.textAlign = "start"
+  context.textBaseline = "alphabetic"
+  context.direction = "ltr"
+
+  var pixels = getPixels(canvas, context, str, size, lineSpacing, styletags)
+
+  return processPixels(pixels, options, size)
+}
+
+},{"cdt2d":52,"clean-pslg":59,"ndarray":220,"planar-graph-to-polyline":235,"simplify-planar-graph":272,"surface-nets":278}],285:[function(_dereq_,module,exports){
 (function (process){
 'use strict'
 
@@ -45546,61 +46032,68 @@ function unwrap(mesh) {
 function textGet(font, text, opts) {
   var opts = opts || {}
   var fontcache = __TEXT_CACHE[font]
-   if(!fontcache) {
-     fontcache = __TEXT_CACHE[font] = {
-       ' ': {
-         data:   new Float32Array(0),
-         shape: 0.2
-       }
-     }
-   }
-   var mesh = fontcache[text]
-   if(!mesh) {
-     if(text.length <= 1 || !/\d/.test(text)) {
-       mesh = fontcache[text] = unwrap(vectorizeText(text, {
-         triangles:     true,
-         font:          font,
-         textAlign:     opts.textAlign || 'left',
-         textBaseline:  'alphabetic'
-       }))
-     } else {
-       var parts = text.split(/(\d|\s)/)
-       var buffer = new Array(parts.length)
-       var bufferSize = 0
-       var shapeX = 0
-       for(var i=0; i<parts.length; ++i) {
-         buffer[i] = textGet(font, parts[i])
-         bufferSize += buffer[i].data.length
-         shapeX += buffer[i].shape
-         if(i>0) {
-           shapeX += 0.02
-         }
-       }
+  if(!fontcache) {
+    fontcache = __TEXT_CACHE[font] = {
+      ' ': {
+        data:   new Float32Array(0),
+        shape: 0.2
+      }
+    }
+  }
+  var mesh = fontcache[text]
+  if(!mesh) {
+    if(text.length <= 1 || !/\d/.test(text)) {
+      mesh = fontcache[text] = unwrap(vectorizeText(text, {
+        triangles:     true,
+        font:          font,
+        textAlign:     opts.textAlign || 'left',
+        textBaseline:  'alphabetic',
+        styletags: {
+            breaklines: true,
+                 bolds: true,
+               italics: true,
+            subscripts: true,
+          superscripts: true
+        }
+      }))
+    } else {
+      var parts = text.split(/(\d|\s)/)
+      var buffer = new Array(parts.length)
+      var bufferSize = 0
+      var shapeX = 0
+      for(var i=0; i<parts.length; ++i) {
+        buffer[i] = textGet(font, parts[i])
+        bufferSize += buffer[i].data.length
+        shapeX += buffer[i].shape
+        if(i>0) {
+          shapeX += 0.02
+        }
+      }
 
-       var data = new Float32Array(bufferSize)
-       var ptr     = 0
-       var xOffset = -0.5 * shapeX
-       for(var i=0; i<buffer.length; ++i) {
-         var bdata = buffer[i].data
-         for(var j=0; j<bdata.length; j+=2) {
-           data[ptr++] = bdata[j] + xOffset
-           data[ptr++] = bdata[j+1]
-         }
-         xOffset += buffer[i].shape + 0.02
-       }
+      var data = new Float32Array(bufferSize)
+      var ptr     = 0
+      var xOffset = -0.5 * shapeX
+      for(var i=0; i<buffer.length; ++i) {
+        var bdata = buffer[i].data
+        for(var j=0; j<bdata.length; j+=2) {
+          data[ptr++] = bdata[j] + xOffset
+          data[ptr++] = bdata[j+1]
+        }
+        xOffset += buffer[i].shape + 0.02
+      }
 
-       mesh = fontcache[text] = {
-         data:  data,
-         shape: shapeX
-       }
-     }
-   }
+      mesh = fontcache[text] = {
+        data:  data,
+        shape: shapeX
+      }
+    }
+  }
 
    return mesh
 }
 
 }).call(this,_dereq_('_process'))
-},{"_process":248,"vectorize-text":295}],284:[function(_dereq_,module,exports){
+},{"_process":248,"vectorize-text":283}],286:[function(_dereq_,module,exports){
 // TinyColor v1.4.1
 // https://github.com/bgrins/TinyColor
 // Brian Grinstead, MIT License
@@ -46797,7 +47290,7 @@ else {
 
 })(Math);
 
-},{}],285:[function(_dereq_,module,exports){
+},{}],287:[function(_dereq_,module,exports){
 /* @module to-float32 */
 
 'use strict'
@@ -46833,7 +47326,7 @@ function float32 (arr) {
 	return float
 }
 
-},{}],286:[function(_dereq_,module,exports){
+},{}],288:[function(_dereq_,module,exports){
 'use strict'
 
 var parseUnit = _dereq_('parse-unit')
@@ -46894,7 +47387,7 @@ function toPX(str, element) {
   }
   return 1
 }
-},{"parse-unit":228}],287:[function(_dereq_,module,exports){
+},{"parse-unit":228}],289:[function(_dereq_,module,exports){
 "use strict"
 
 module.exports = triangulateCube
@@ -46928,7 +47421,7 @@ function triangulateCube(dimension) {
   }
   return result
 }
-},{"gamma":154,"permutation-parity":230,"permutation-rank":231}],288:[function(_dereq_,module,exports){
+},{"gamma":154,"permutation-parity":230,"permutation-rank":231}],290:[function(_dereq_,module,exports){
 "use strict"
 
 module.exports = twoProduct
@@ -46962,7 +47455,7 @@ function twoProduct(a, b, result) {
 
   return [ y, x ]
 }
-},{}],289:[function(_dereq_,module,exports){
+},{}],291:[function(_dereq_,module,exports){
 "use strict"
 
 module.exports = fastTwoSum
@@ -46980,7 +47473,7 @@ function fastTwoSum(a, b, result) {
 	}
 	return [ar+br, x]
 }
-},{}],290:[function(_dereq_,module,exports){
+},{}],292:[function(_dereq_,module,exports){
 (function (global,Buffer){
 'use strict'
 
@@ -47197,7 +47690,7 @@ exports.clearCache = function clearCache() {
   }
 }
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},_dereq_("buffer").Buffer)
-},{"bit-twiddle":39,"buffer":51,"dup":91}],291:[function(_dereq_,module,exports){
+},{"bit-twiddle":39,"buffer":51,"dup":91}],293:[function(_dereq_,module,exports){
 "use strict"; "use restrict";
 
 module.exports = UnionFind;
@@ -47260,7 +47753,7 @@ proto.link = function(x, y) {
     ++ranks[xr];
   }
 }
-},{}],292:[function(_dereq_,module,exports){
+},{}],294:[function(_dereq_,module,exports){
 "use strict"
 
 function unique_pred(list, compare) {
@@ -47319,7 +47812,7 @@ function unique(list, compare, sorted) {
 
 module.exports = unique
 
-},{}],293:[function(_dereq_,module,exports){
+},{}],295:[function(_dereq_,module,exports){
 var reg = /[\'\"]/
 
 module.exports = function unquote(str) {
@@ -47335,7 +47828,7 @@ module.exports = function unquote(str) {
   return str
 }
 
-},{}],294:[function(_dereq_,module,exports){
+},{}],296:[function(_dereq_,module,exports){
 /**
  * @module update-diff
  */
@@ -47368,240 +47861,7 @@ module.exports = function updateDiff (obj, diff, mappers) {
 	return obj
 }
 
-},{}],295:[function(_dereq_,module,exports){
-"use strict"
-
-module.exports = createText
-
-var vectorizeText = _dereq_("./lib/vtext")
-var defaultCanvas = null
-var defaultContext = null
-
-if(typeof document !== 'undefined') {
-  defaultCanvas = document.createElement('canvas')
-  defaultCanvas.width = 8192
-  defaultCanvas.height = 1024
-  defaultContext = defaultCanvas.getContext("2d")
-}
-
-function createText(str, options) {
-  if((typeof options !== "object") || (options === null)) {
-    options = {}
-  }
-  return vectorizeText(
-    str,
-    options.canvas || defaultCanvas,
-    options.context || defaultContext,
-    options)
-}
-
-},{"./lib/vtext":296}],296:[function(_dereq_,module,exports){
-"use strict"
-
-module.exports = vectorizeText
-module.exports.processPixels = processPixels
-
-var surfaceNets = _dereq_('surface-nets')
-var ndarray = _dereq_('ndarray')
-var simplify = _dereq_('simplify-planar-graph')
-var cleanPSLG = _dereq_('clean-pslg')
-var cdt2d = _dereq_('cdt2d')
-var toPolygonCrappy = _dereq_('planar-graph-to-polyline')
-
-function transformPositions(positions, options, size) {
-  var align = options.textAlign || "start"
-  var baseline = options.textBaseline || "alphabetic"
-
-  var lo = [1<<30, 1<<30]
-  var hi = [0,0]
-  var n = positions.length
-  for(var i=0; i<n; ++i) {
-    var p = positions[i]
-    for(var j=0; j<2; ++j) {
-      lo[j] = Math.min(lo[j], p[j])|0
-      hi[j] = Math.max(hi[j], p[j])|0
-    }
-  }
-
-  var xShift = 0
-  switch(align) {
-    case "center":
-      xShift = -0.5 * (lo[0] + hi[0])
-    break
-
-    case "right":
-    case "end":
-      xShift = -hi[0]
-    break
-
-    case "left":
-    case "start":
-      xShift = -lo[0]
-    break
-
-    default:
-      throw new Error("vectorize-text: Unrecognized textAlign: '" + align + "'")
-  }
-
-  var yShift = 0
-  switch(baseline) {
-    case "hanging":
-    case "top":
-      yShift = -lo[1]
-    break
-
-    case "middle":
-      yShift = -0.5 * (lo[1] + hi[1])
-    break
-
-    case "alphabetic":
-    case "ideographic":
-      yShift = -3 * size
-    break
-
-    case "bottom":
-      yShift = -hi[1]
-    break
-
-    default:
-      throw new Error("vectorize-text: Unrecoginized textBaseline: '" + baseline + "'")
-  }
-
-  var scale = 1.0 / size
-  if("lineHeight" in options) {
-    scale *= +options.lineHeight
-  } else if("width" in options) {
-    scale = options.width / (hi[0] - lo[0])
-  } else if("height" in options) {
-    scale = options.height / (hi[1] - lo[1])
-  }
-
-  return positions.map(function(p) {
-    return [ scale * (p[0] + xShift), scale * (p[1] + yShift) ]
-  })
-}
-
-function getPixels(canvas, context, str, size) {
-  var width = Math.ceil(context.measureText(str).width + 2*size)|0
-  if(width > 8192) {
-    throw new Error("vectorize-text: String too long (sorry, this will get fixed later)")
-  }
-  var height = 3 * size
-  if(canvas.height < height) {
-    canvas.height = height
-  }
-
-  context.fillStyle = "#000"
-  context.fillRect(0, 0, canvas.width, canvas.height)
-
-  context.fillStyle = "#fff"
-  context.fillText(str, size, 2*size)
-
-  //Cut pixels from image
-  var pixelData = context.getImageData(0, 0, width, height)
-  var pixels = ndarray(pixelData.data, [height, width, 4])
-
-  return pixels.pick(-1,-1,0).transpose(1,0)
-}
-
-function getContour(pixels, doSimplify) {
-  var contour = surfaceNets(pixels, 128)
-  if(doSimplify) {
-    return simplify(contour.cells, contour.positions, 0.25)
-  }
-  return {
-    edges: contour.cells,
-    positions: contour.positions
-  }
-}
-
-function processPixelsImpl(pixels, options, size, simplify) {
-  //Extract contour
-  var contour = getContour(pixels, simplify)
-
-  //Apply warp to positions
-  var positions = transformPositions(contour.positions, options, size)
-  var edges     = contour.edges
-  var flip = "ccw" === options.orientation
-
-  //Clean up the PSLG, resolve self intersections, etc.
-  cleanPSLG(positions, edges)
-
-  //If triangulate flag passed, triangulate the result
-  if(options.polygons || options.polygon || options.polyline) {
-    var result = toPolygonCrappy(edges, positions)
-    var nresult = new Array(result.length)
-    for(var i=0; i<result.length; ++i) {
-      var loops = result[i]
-      var nloops = new Array(loops.length)
-      for(var j=0; j<loops.length; ++j) {
-        var loop = loops[j]
-        var nloop = new Array(loop.length)
-        for(var k=0; k<loop.length; ++k) {
-          nloop[k] = positions[loop[k]].slice()
-        }
-        if(flip) {
-          nloop.reverse()
-        }
-        nloops[j] = nloop
-      }
-      nresult[i] = nloops
-    }
-    return nresult
-  } else if(options.triangles || options.triangulate || options.triangle) {
-    return {
-      cells: cdt2d(positions, edges, {
-        delaunay: false,
-        exterior: false,
-        interior: true
-      }),
-      positions: positions
-    }
-  } else {
-    return {
-      edges:     edges,
-      positions: positions
-    }
-  }
-}
-
-function processPixels(pixels, options, size) {
-  try {
-    return processPixelsImpl(pixels, options, size, true)
-  } catch(e) {}
-  try {
-    return processPixelsImpl(pixels, options, size, false)
-  } catch(e) {}
-  if(options.polygons || options.polyline || options.polygon) {
-    return []
-  }
-  if(options.triangles || options.triangulate || options.triangle) {
-    return {
-      cells: [],
-      positions: []
-    }
-  }
-  return {
-    edges: [],
-    positions: []
-  }
-}
-
-function vectorizeText(str, canvas, context, options) {
-  var size = options.size || 64
-  var family = options.font || "normal"
-
-  context.font = size + "px " + family
-  context.textAlign = "start"
-  context.textBaseline = "alphabetic"
-  context.direction = "ltr"
-
-  var pixels = getPixels(canvas, context, str, size)
-
-  return processPixels(pixels, options, size)
-}
-
-},{"cdt2d":52,"clean-pslg":59,"ndarray":220,"planar-graph-to-polyline":235,"simplify-planar-graph":272,"surface-nets":278}],297:[function(_dereq_,module,exports){
+},{}],297:[function(_dereq_,module,exports){
 var hiddenStore = _dereq_('./hidden-store.js');
 
 module.exports = createStore;
@@ -50074,7 +50334,7 @@ function cleanOne(val) {
     return 'rgb(' + rgbStr + ')';
 }
 
-},{"./attributes":318,"fast-isnumeric":149,"tinycolor2":284}],320:[function(_dereq_,module,exports){
+},{"./attributes":318,"fast-isnumeric":149,"tinycolor2":286}],320:[function(_dereq_,module,exports){
 /**
 * Copyright 2012-2018, Plotly, Inc.
 * All rights reserved.
@@ -51070,7 +51330,7 @@ module.exports = function draw(gd, id) {
     return component;
 };
 
-},{"../../constants/alignment":417,"../../lib":441,"../../lib/extend":432,"../../lib/setcursor":462,"../../lib/svg_text_utils":466,"../../plots/cartesian/axes":489,"../../plots/cartesian/axis_defaults":491,"../../plots/cartesian/layout_attributes":502,"../../plots/cartesian/position_defaults":505,"../../plots/plots":526,"../../registry":533,"../color":319,"../dragelement":341,"../drawing":344,"../titles":410,"./attributes":320,"./constants":322,"d3":85,"tinycolor2":284}],325:[function(_dereq_,module,exports){
+},{"../../constants/alignment":417,"../../lib":441,"../../lib/extend":432,"../../lib/setcursor":462,"../../lib/svg_text_utils":466,"../../plots/cartesian/axes":489,"../../plots/cartesian/axis_defaults":491,"../../plots/cartesian/layout_attributes":502,"../../plots/cartesian/position_defaults":505,"../../plots/plots":526,"../../registry":533,"../color":319,"../dragelement":341,"../drawing":344,"../titles":410,"./attributes":320,"./constants":322,"d3":85,"tinycolor2":286}],325:[function(_dereq_,module,exports){
 /**
 * Copyright 2012-2018, Plotly, Inc.
 * All rights reserved.
@@ -51686,7 +51946,7 @@ module.exports = function isValidScaleArray(scl) {
     return true;
 };
 
-},{"tinycolor2":284}],337:[function(_dereq_,module,exports){
+},{"tinycolor2":286}],337:[function(_dereq_,module,exports){
 /**
 * Copyright 2012-2018, Plotly, Inc.
 * All rights reserved.
@@ -51782,7 +52042,7 @@ function colorArray2rbga(colorArray) {
     return tinycolor(colorObj).toRgbString();
 }
 
-},{"../color":319,"d3":85,"fast-isnumeric":149,"tinycolor2":284}],338:[function(_dereq_,module,exports){
+},{"../color":319,"d3":85,"fast-isnumeric":149,"tinycolor2":286}],338:[function(_dereq_,module,exports){
 /**
 * Copyright 2012-2018, Plotly, Inc.
 * All rights reserved.
@@ -53536,7 +53796,7 @@ drawing.setTextPointsScale = function(selection, xScale, yScale) {
     });
 };
 
-},{"../../constants/alignment":417,"../../constants/interactions":419,"../../constants/xmlns_namespaces":421,"../../lib":441,"../../lib/svg_text_utils":466,"../../registry":533,"../../traces/scatter/make_bubble_size_func":610,"../../traces/scatter/subtypes":617,"../color":319,"../colorscale":334,"./symbol_defs":345,"d3":85,"fast-isnumeric":149,"tinycolor2":284}],345:[function(_dereq_,module,exports){
+},{"../../constants/alignment":417,"../../constants/interactions":419,"../../constants/xmlns_namespaces":421,"../../lib":441,"../../lib/svg_text_utils":466,"../../registry":533,"../../traces/scatter/make_bubble_size_func":610,"../../traces/scatter/subtypes":617,"../color":319,"../colorscale":334,"./symbol_defs":345,"d3":85,"fast-isnumeric":149,"tinycolor2":286}],345:[function(_dereq_,module,exports){
 /**
 * Copyright 2012-2018, Plotly, Inc.
 * All rights reserved.
@@ -54809,6 +55069,17 @@ module.exports = function click(gd, evt, subplot) {
     }
 
     function emitClick() { gd.emit('plotly_click', {points: gd._hoverdata, event: evt}); }
+    // Get the mouse click position on xaxis
+    var render_margin_l = parseInt(gd.layout.margin['l']);
+    var render_w = gd._fullLayout._size.w;
+    var mouse_x = evt.offsetX;
+    var axisx_min = parseInt(gd.layout.xaxis.range[0]);
+    var axisx_max = parseInt(gd.layout.xaxis.range[1]);
+    var click_x = ((parseInt(mouse_x) - render_margin_l) / render_w * (axisx_max - axisx_min)) + axisx_min
+
+    // Create a custom_data and send it along with other data
+    var custom_data = {click_x: click_x}
+    function emitClick() { gd.emit('plotly_click', {points: gd._hoverdata, event: evt, custom_data: custom_data}); }
 
     if(gd._hoverdata && evt && evt.target) {
         if(annotationsDone && annotationsDone.then) {
@@ -54819,6 +55090,9 @@ module.exports = function click(gd, evt, subplot) {
         // why do we get a double event without this???
         if(evt.stopImmediatePropagation) evt.stopImmediatePropagation();
     }
+    // Emit event even if no data is selected
+    // This against the design philosophy, but I really need this.
+    if(evt && evt.target) emitClick();
 };
 
 },{"../../registry":533,"./hover":359}],356:[function(_dereq_,module,exports){
@@ -56673,7 +56947,7 @@ function spikesChanged(gd, oldspikepoints) {
     return false;
 }
 
-},{"../../lib":441,"../../lib/events":431,"../../lib/override_cursor":453,"../../lib/svg_text_utils":466,"../../plots/cartesian/axes":489,"../../registry":533,"../color":319,"../dragelement":341,"../drawing":344,"./constants":356,"./helpers":358,"d3":85,"fast-isnumeric":149,"tinycolor2":284}],360:[function(_dereq_,module,exports){
+},{"../../lib":441,"../../lib/events":431,"../../lib/override_cursor":453,"../../lib/svg_text_utils":466,"../../plots/cartesian/axes":489,"../../registry":533,"../color":319,"../dragelement":341,"../drawing":344,"./constants":356,"./helpers":358,"d3":85,"fast-isnumeric":149,"tinycolor2":286}],360:[function(_dereq_,module,exports){
 /**
 * Copyright 2012-2018, Plotly, Inc.
 * All rights reserved.
@@ -67550,7 +67824,7 @@ function validate(value, opts) {
 }
 exports.validate = validate;
 
-},{"../components/colorscale/get_scale":332,"../components/colorscale/scales":338,"../constants/interactions":419,"../plots/attributes":486,"./is_array":442,"./mod":449,"./nested_property":450,"./regex":458,"fast-isnumeric":149,"tinycolor2":284}],429:[function(_dereq_,module,exports){
+},{"../components/colorscale/get_scale":332,"../components/colorscale/scales":338,"../constants/interactions":419,"../plots/attributes":486,"./is_array":442,"./mod":449,"./nested_property":450,"./regex":458,"fast-isnumeric":149,"tinycolor2":286}],429:[function(_dereq_,module,exports){
 /**
 * Copyright 2012-2018, Plotly, Inc.
 * All rights reserved.
@@ -68962,7 +69236,7 @@ module.exports = {
     parseColorScale: parseColorScale
 };
 
-},{"../components/color/attributes":318,"../components/colorscale":334,"./is_array":442,"color-normalize":63,"fast-isnumeric":149,"tinycolor2":284}],438:[function(_dereq_,module,exports){
+},{"../components/color/attributes":318,"../components/colorscale":334,"./is_array":442,"color-normalize":63,"fast-isnumeric":149,"tinycolor2":286}],438:[function(_dereq_,module,exports){
 /**
 * Copyright 2012-2018, Plotly, Inc.
 * All rights reserved.
@@ -69777,7 +70051,7 @@ lib.addRelatedStyleRule = function(uid, selector, styleString) {
 lib.deleteRelatedStyleRule = function(uid) {
     var id = 'plotly.js-style-' + uid,
         style = document.getElementById(id);
-    if(style) style.remove();
+    if(style) lib.removeElement(style);
 };
 
 lib.isIE = function() {
@@ -77936,6 +78210,7 @@ exports.get = function() {
  *          @param {String} attrName name string
  *          @param {object[]} attrs all the attributes
  *          @param {Number} level the recursion level, 0 at the root
+ *          @param {String} fullAttrString full attribute name (ie 'marker.line')
  * @param {Number} [specifiedLevel]
  *  The level in the tree, in order to let the callback function detect descend or backtrack,
  *  typically unsupplied (implied 0), just used by the self-recursive call.
@@ -78284,11 +78559,22 @@ function getTraceAttributes(type) {
     // make 'type' the first attribute in the object
     attributes.type = null;
 
+
+    var copyBaseAttributes = extendDeepAll({}, baseAttributes);
+    var copyModuleAttributes = extendDeepAll({}, _module.attributes);
+
+    // prune global-level trace attributes that are already defined in a trace
+    exports.crawl(copyModuleAttributes, function(attr, attrName, attrs, level, fullAttrString) {
+        Lib.nestedProperty(copyBaseAttributes, fullAttrString).set(undefined);
+        // Prune undefined attributes
+        if(attr === undefined) Lib.nestedProperty(copyModuleAttributes, fullAttrString).set(undefined);
+    });
+
     // base attributes (same for all trace types)
-    extendDeepAll(attributes, baseAttributes);
+    extendDeepAll(attributes, copyBaseAttributes);
 
     // module attributes
-    extendDeepAll(attributes, _module.attributes);
+    extendDeepAll(attributes, copyModuleAttributes);
 
     // subplot attributes
     if(basePlotModule.attributes) {
@@ -86121,7 +86407,7 @@ module.exports = {
     attachWheelEventHandler: attachWheelEventHandler
 };
 
-},{"../../components/color":319,"../../components/dragelement":341,"../../components/drawing":344,"../../components/fx":361,"../../constants/alignment":417,"../../lib":441,"../../lib/clear_gl_canvases":426,"../../lib/setcursor":462,"../../lib/svg_text_utils":466,"../../plot_api/subroutines":480,"../../registry":533,"../plots":526,"./axes":489,"./axis_ids":492,"./constants":495,"./scale_zoom":506,"./select":507,"d3":85,"has-passive-events":201,"tinycolor2":284}],499:[function(_dereq_,module,exports){
+},{"../../components/color":319,"../../components/dragelement":341,"../../components/drawing":344,"../../components/fx":361,"../../constants/alignment":417,"../../lib":441,"../../lib/clear_gl_canvases":426,"../../lib/setcursor":462,"../../lib/svg_text_utils":466,"../../plot_api/subroutines":480,"../../registry":533,"../plots":526,"./axes":489,"./axis_ids":492,"./constants":495,"./scale_zoom":506,"./select":507,"d3":85,"has-passive-events":201,"tinycolor2":286}],499:[function(_dereq_,module,exports){
 /**
 * Copyright 2012-2018, Plotly, Inc.
 * All rights reserved.
@@ -87846,7 +88132,7 @@ module.exports = function handleLineGridDefaults(containerIn, containerOut, coer
     }
 };
 
-},{"../../components/color/attributes":318,"../../lib":441,"tinycolor2":284}],505:[function(_dereq_,module,exports){
+},{"../../components/color/attributes":318,"../../lib":441,"tinycolor2":286}],505:[function(_dereq_,module,exports){
 /**
 * Copyright 2012-2018, Plotly, Inc.
 * All rights reserved.
@@ -93470,6 +93756,7 @@ plots.supplyTraceDefaults = function(traceIn, traceOut, colorIndex, layout, trac
     // we want even invisible traces to make their would-be subplots visible
     // so coerce the subplot id(s) now no matter what
     var _module = plots.getModule(traceOut);
+
     traceOut._module = _module;
     if(_module) {
         var basePlotModule = _module.basePlotModule;
@@ -93503,6 +93790,18 @@ plots.supplyTraceDefaults = function(traceIn, traceOut, colorIndex, layout, trac
         }
     }
 
+    function coerceUnlessPruned(attr, dflt, cb) {
+        if(_module && (attr in _module.attributes) && _module.attributes[attr] === undefined) {
+            // Pruned
+        } else {
+            if(cb && typeof cb === 'function') {
+                cb();
+            } else {
+                coerce(attr, dflt);
+            }
+        }
+    }
+
     if(visible) {
         coerce('customdata');
         coerce('ids');
@@ -93516,10 +93815,12 @@ plots.supplyTraceDefaults = function(traceIn, traceOut, colorIndex, layout, trac
             traceOut._dfltShowLegend = false;
         }
 
-        Registry.getComponentMethod(
-            'fx',
-            'supplyDefaults'
-        )(traceIn, traceOut, defaultColor, layout);
+        coerceUnlessPruned('hoverlabel', '', function() {
+            Registry.getComponentMethod(
+                'fx',
+                'supplyDefaults'
+            )(traceIn, traceOut, defaultColor, layout);
+        });
 
         // TODO add per-base-plot-module trace defaults step
 
@@ -98986,6 +99287,7 @@ module.exports = extendFlat({
         editType: 'none',
         
     },
+    transforms: undefined
 },
     colorscaleAttrs('', {
         cLetter: 'z',
@@ -100614,6 +100916,8 @@ var templatedArray = _dereq_('../../plot_api/plot_template').templatedArray;
 
 module.exports = {
     domain: domainAttrs({name: 'parcoords', trace: true, editType: 'calc'}),
+
+    hoverlabel: undefined,
 
     labelfont: fontAttrs({
         editType: 'calc',
@@ -103067,7 +103371,8 @@ module.exports = {
             editType: 'calc'
         },
         editType: 'calc'
-    }
+    },
+    transforms: undefined
 };
 
 },{"../scatter/attributes":593}],589:[function(_dereq_,module,exports){

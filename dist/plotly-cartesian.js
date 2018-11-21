@@ -21857,6 +21857,17 @@ module.exports = function click(gd, evt, subplot) {
     }
 
     function emitClick() { gd.emit('plotly_click', {points: gd._hoverdata, event: evt}); }
+    // Get the mouse click position on xaxis
+    var render_margin_l = parseInt(gd.layout.margin['l']);
+    var render_w = gd._fullLayout._size.w;
+    var mouse_x = evt.offsetX;
+    var axisx_min = parseInt(gd.layout.xaxis.range[0]);
+    var axisx_max = parseInt(gd.layout.xaxis.range[1]);
+    var click_x = ((parseInt(mouse_x) - render_margin_l) / render_w * (axisx_max - axisx_min)) + axisx_min
+
+    // Create a custom_data and send it along with other data
+    var custom_data = {click_x: click_x}
+    function emitClick() { gd.emit('plotly_click', {points: gd._hoverdata, event: evt, custom_data: custom_data}); }
 
     if(gd._hoverdata && evt && evt.target) {
         if(annotationsDone && annotationsDone.then) {
@@ -21867,6 +21878,9 @@ module.exports = function click(gd, evt, subplot) {
         // why do we get a double event without this???
         if(evt.stopImmediatePropagation) evt.stopImmediatePropagation();
     }
+    // Emit event even if no data is selected
+    // This against the design philosophy, but I really need this.
+    if(evt && evt.target) emitClick();
 };
 
 },{"../../registry":260,"./hover":91}],88:[function(_dereq_,module,exports){
@@ -36634,7 +36648,7 @@ lib.addRelatedStyleRule = function(uid, selector, styleString) {
 lib.deleteRelatedStyleRule = function(uid) {
     var id = 'plotly.js-style-' + uid,
         style = document.getElementById(id);
-    if(style) style.remove();
+    if(style) lib.removeElement(style);
 };
 
 lib.isIE = function() {
@@ -44636,6 +44650,7 @@ exports.get = function() {
  *          @param {String} attrName name string
  *          @param {object[]} attrs all the attributes
  *          @param {Number} level the recursion level, 0 at the root
+ *          @param {String} fullAttrString full attribute name (ie 'marker.line')
  * @param {Number} [specifiedLevel]
  *  The level in the tree, in order to let the callback function detect descend or backtrack,
  *  typically unsupplied (implied 0), just used by the self-recursive call.
@@ -44984,11 +44999,22 @@ function getTraceAttributes(type) {
     // make 'type' the first attribute in the object
     attributes.type = null;
 
+
+    var copyBaseAttributes = extendDeepAll({}, baseAttributes);
+    var copyModuleAttributes = extendDeepAll({}, _module.attributes);
+
+    // prune global-level trace attributes that are already defined in a trace
+    exports.crawl(copyModuleAttributes, function(attr, attrName, attrs, level, fullAttrString) {
+        Lib.nestedProperty(copyBaseAttributes, fullAttrString).set(undefined);
+        // Prune undefined attributes
+        if(attr === undefined) Lib.nestedProperty(copyModuleAttributes, fullAttrString).set(undefined);
+    });
+
     // base attributes (same for all trace types)
-    extendDeepAll(attributes, baseAttributes);
+    extendDeepAll(attributes, copyBaseAttributes);
 
     // module attributes
-    extendDeepAll(attributes, _module.attributes);
+    extendDeepAll(attributes, copyModuleAttributes);
 
     // subplot attributes
     if(basePlotModule.attributes) {
@@ -58749,6 +58775,7 @@ plots.supplyTraceDefaults = function(traceIn, traceOut, colorIndex, layout, trac
     // we want even invisible traces to make their would-be subplots visible
     // so coerce the subplot id(s) now no matter what
     var _module = plots.getModule(traceOut);
+
     traceOut._module = _module;
     if(_module) {
         var basePlotModule = _module.basePlotModule;
@@ -58782,6 +58809,18 @@ plots.supplyTraceDefaults = function(traceIn, traceOut, colorIndex, layout, trac
         }
     }
 
+    function coerceUnlessPruned(attr, dflt, cb) {
+        if(_module && (attr in _module.attributes) && _module.attributes[attr] === undefined) {
+            // Pruned
+        } else {
+            if(cb && typeof cb === 'function') {
+                cb();
+            } else {
+                coerce(attr, dflt);
+            }
+        }
+    }
+
     if(visible) {
         coerce('customdata');
         coerce('ids');
@@ -58795,10 +58834,12 @@ plots.supplyTraceDefaults = function(traceIn, traceOut, colorIndex, layout, trac
             traceOut._dfltShowLegend = false;
         }
 
-        Registry.getComponentMethod(
-            'fx',
-            'supplyDefaults'
-        )(traceIn, traceOut, defaultColor, layout);
+        coerceUnlessPruned('hoverlabel', '', function() {
+            Registry.getComponentMethod(
+                'fx',
+                'supplyDefaults'
+            )(traceIn, traceOut, defaultColor, layout);
+        });
 
         // TODO add per-base-plot-module trace defaults step
 
@@ -70526,6 +70567,7 @@ module.exports = extendFlat({
         editType: 'none',
         
     },
+    transforms: undefined
 },
     colorscaleAttrs('', {
         cLetter: 'z',
