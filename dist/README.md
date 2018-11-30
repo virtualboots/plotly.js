@@ -157,7 +157,7 @@ The `cartesian` partial bundle contains trace modules `scatter`, `bar`, `box`, `
 
 | Raw size | Minified size | Minified + gzip size |
 |------|-----------------|------------------------|
-| 2.5 MB | 898.7 kB | 292.5 kB |
+| 2.5 MB | 898.8 kB | 292.5 kB |
 
 #### CDN links
 
@@ -203,7 +203,7 @@ The `geo` partial bundle contains trace modules `scatter`, `scattergeo` and `cho
 
 | Raw size | Minified size | Minified + gzip size |
 |------|-----------------|------------------------|
-| 2.2 MB | 805.1 kB | 265.2 kB |
+| 2.2 MB | 805.2 kB | 265.2 kB |
 
 #### CDN links
 
@@ -387,7 +387,7 @@ The `finance` partial bundle contains trace modules `scatter`, `bar`, `histogram
 
 | Raw size | Minified size | Minified + gzip size |
 |------|-----------------|------------------------|
-| 2.3 MB | 817.9 kB | 266.7 kB |
+| 2.3 MB | 818 kB | 266.8 kB |
 
 #### CDN links
 

@@ -52357,6 +52357,8 @@ dragElement.init = function init(options) {
         initialTarget,
         rightClick;
 
+    var start_e;
+
     if(!gd._mouseDownTime) gd._mouseDownTime = 0;
 
     element.style.pointerEvents = 'all';
@@ -52384,6 +52386,9 @@ dragElement.init = function init(options) {
 
     function onStart(e) {
         e.preventDefault();
+
+        // Save the event data of start selection
+        start_e = e;
 
         // make dragging and dragged into properties of gd
         // so that others can look at and modify them
@@ -52448,7 +52453,9 @@ dragElement.init = function init(options) {
             dragElement.unhover(gd);
         }
 
-        if(gd._dragged && options.moveFn && !rightClick) options.moveFn(dx, dy);
+        // Not only the x/y range is sent, the event data of selection start and end is sent
+        // as well
+        if(gd._dragged && options.moveFn && !rightClick) options.moveFn(dx, dy, start_e, e);
 
         return;
     }
@@ -88369,7 +88376,7 @@ function prepSelect(e, startX, startY, dragOptions, mode) {
         }
     }
 
-    dragOptions.moveFn = function(dx0, dy0) {
+    dragOptions.moveFn = function(dx0, dy0, start_evt, evt) {
         x1 = Math.max(0, Math.min(pw, dx0 + x0));
         y1 = Math.max(0, Math.min(ph, dy0 + y0));
 
@@ -88470,6 +88477,10 @@ function prepSelect(e, startX, startY, dragOptions, mode) {
                 eventData = {points: selection};
                 updateSelectedState(gd, searchTraces, eventData);
                 fillRangeItems(eventData, currentPolygon, filterPoly);
+
+                // We also send additional event data for advance usage
+                eventData.start_evt = start_evt;
+                eventData.end_evt = evt;
                 dragOptions.gd.emit('plotly_selecting', eventData);
             }
         );

@@ -122,7 +122,7 @@ function prepSelect(e, startX, startY, dragOptions, mode) {
         }
     }
 
-    dragOptions.moveFn = function(dx0, dy0) {
+    dragOptions.moveFn = function(dx0, dy0, start_evt, evt) {
         x1 = Math.max(0, Math.min(pw, dx0 + x0));
         y1 = Math.max(0, Math.min(ph, dy0 + y0));
 
@@ -223,6 +223,10 @@ function prepSelect(e, startX, startY, dragOptions, mode) {
                 eventData = {points: selection};
                 updateSelectedState(gd, searchTraces, eventData);
                 fillRangeItems(eventData, currentPolygon, filterPoly);
+
+                // We also send additional event data for advance usage
+                eventData.start_evt = start_evt;
+                eventData.end_evt = evt;
                 dragOptions.gd.emit('plotly_selecting', eventData);
             }
         );

@@ -98,6 +98,8 @@ dragElement.init = function init(options) {
         initialTarget,
         rightClick;
 
+    var start_e;
+
     if(!gd._mouseDownTime) gd._mouseDownTime = 0;
 
     element.style.pointerEvents = 'all';
@@ -125,6 +127,9 @@ dragElement.init = function init(options) {
 
     function onStart(e) {
         e.preventDefault();
+
+        // Save the event data of start selection
+        start_e = e;
 
         // make dragging and dragged into properties of gd
         // so that others can look at and modify them
@@ -189,7 +194,9 @@ dragElement.init = function init(options) {
             dragElement.unhover(gd);
         }
 
-        if(gd._dragged && options.moveFn && !rightClick) options.moveFn(dx, dy);
+        // Not only the x/y range is sent, the event data of selection start and end is sent
+        // as well
+        if(gd._dragged && options.moveFn && !rightClick) options.moveFn(dx, dy, start_e, e);
 
         return;
     }
